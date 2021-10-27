@@ -1,6 +1,6 @@
-const Customer = require('./Customers');
-const Event = require('./Events');
-const EventType = require('./EventTypes');
+const Customer = require('./Customer');
+const Event = require('./Event');
+const EventType = require('./EventType');
 const Reservation = require('./Reservation');
 
 Customer.hasMany(Reservation, {foreignKey: { allowNull: false }});
