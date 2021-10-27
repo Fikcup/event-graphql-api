@@ -1,6 +1,6 @@
-const { gql } = require('graphql');
+var { buildSchema } = require('graphql');
 
-const typeDefs = gql`
+const typeDefs = buildSchema(`
     type Customer {
         _id: ID!
         name: String!
@@ -25,6 +25,6 @@ const typeDefs = gql`
         eventDate: String!
         headCount: Int!
     }
-`;
+`);
 
 module.exports = typeDefs;
