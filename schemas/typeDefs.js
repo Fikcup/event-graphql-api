@@ -35,11 +35,14 @@ const typeDefs = buildSchema(`
         getOneReservation(id: ID!): Reservation
         getAllEvents(): [Event]
         getOneEvent(id: ID!): Event
+        getAllEventTypes(): [EventType]
+        getOneEventType(id: ID!): EventType
     }
 
     type Mutation {
         addReservation(eventDate: String!, description: String!, customerID: ID!, eventID: ID!): Reservation
         addEvent(name: String!, eventTypeID: ID!, customerID: ID!, reservationID: ID!): Event
+        addEventType(name: String!, description: String!): EventType
     }
 `);
 
