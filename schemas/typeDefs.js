@@ -29,6 +29,15 @@ const typeDefs = buildSchema(`
         eventDate: String!
         headCount: Int!
     }
+    
+    type Query {
+        getAllReservations(): [Reservation]
+        getOneReservation(id: ID!): Reservation
+    }
+
+    type Mutation {
+        addReservation(eventDate: String!, description: String!, customerID: ID!, eventID: ID!): Reservation
+    }
 `);
 
 module.exports = typeDefs;
