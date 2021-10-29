@@ -7,11 +7,15 @@ const typeDefs = buildSchema(`
         phone: String!
         email: String!
         address: String!
+        hasReservation: [Reservation]
     }
 
     type Event {
         _id: ID!
         name: String!
+        hasEventType: EventType!
+        hasCustomer: Customer!
+        hasReservation: [Reservation]
     }
 
     type EventType {
