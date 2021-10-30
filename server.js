@@ -6,7 +6,6 @@ const http = require('http');
 
 const models = require('./models');
 const { typeDefs, resolvers } = require('./schemas');
-const { graphql } = require('graphql');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
