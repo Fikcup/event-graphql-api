@@ -1,4 +1,4 @@
-var { buildSchema } = require('graphql');
+const { buildSchema } = require('graphql');
 
 const typeDefs = buildSchema(`
     type Customer {
