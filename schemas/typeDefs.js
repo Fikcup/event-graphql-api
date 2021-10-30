@@ -1,6 +1,6 @@
-const { buildSchema } = require('graphql');
+const { gql } = require('apollo-server-express');
 
-const typeDefs = buildSchema(`
+const typeDefs = gql`
     type Customer {
         _id: ID!
         name: String!
@@ -29,15 +29,15 @@ const typeDefs = buildSchema(`
         headCount: Int!
         hasCustomer: Customer!
     }
-    
+
     type Query {
-        getAllCustomers(): [Customer]
+        getAllCustomers: [Customer]
         getOneCustomer(id: ID!): Customer
-        getAllReservations(): [Reservation]
+        getAllReservations: [Reservation]
         getOneReservation(id: ID!): Reservation
-        getAllEvents(): [Event]
+        getAllEvents: [Event]
         getOneEvent(id: ID!): Event
-        getAllEventTypes(): [EventType]
+        getAllEventTypes: [EventType]
         getOneEventType(id: ID!): EventType
     }
 
@@ -47,6 +47,6 @@ const typeDefs = buildSchema(`
         addEvent(name: String!, eventTypeID: ID!, customerID: ID!, reservationID: ID!): Event
         addEventType(name: String!, description: String!): EventType
     }
-`);
+`;
 
 module.exports = typeDefs;
