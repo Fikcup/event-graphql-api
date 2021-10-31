@@ -21,6 +21,12 @@ const resolvers = {
             const customerData = Customer.create(newCustomer);
 
             return customerData;
+        },
+        async addReservation(parent, args) {
+            const newReservation = args;
+            const reservationData = Reservation.create(newReservation);
+
+            return reservationData;
         }
     },
 };

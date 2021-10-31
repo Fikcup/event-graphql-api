@@ -49,7 +49,7 @@ const typeDefs = gql`
     # Mutations
     type Mutation {
         addCustomer(name: String!, phone: String!, email: String!, address: String!): Customer!
-        addReservation(eventDate: String!, description: String!, customerID: ID!, eventID: ID!): Reservation!
+        addReservation(eventDate: String!, headCount: Int!): Reservation!
         addEvent(name: String!, eventTypeID: ID!, customerID: ID!, reservationID: ID!): Event!
         addEventType(name: String!, description: String!): EventType!
     }
