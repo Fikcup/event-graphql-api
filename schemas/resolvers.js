@@ -7,6 +7,11 @@ const resolvers = {
 
             return customerData;
         },
+        async getAllReservations() {
+            const reservationData = await Reservation.findAll()
+
+            return reservationData;
+        }
     },
 
     Mutation: {
