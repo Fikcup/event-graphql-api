@@ -1,18 +1,7 @@
 # Event GraphQL APi
 
-## Instructions
+### Next Steps
 
-### Basic
-
-* Use a MySQL database
-* Implement sequelize
 * CRUD all events, reservations, customers, and event types
-
-### Moderate
-
-* Create GraphQL typeDefs
-* Create GraphQL resolvers
-
-### Advanced
-
+* Work in sequelize table associations to GraphQL
 * Implement auth for customers
