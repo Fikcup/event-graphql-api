@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     # Customer model
     type Customer {
-        _id: ID!
+        uuid: ID!
         name: String!
         phone: String!
         email: String!
@@ -12,7 +12,7 @@ const typeDefs = gql`
 
     # Event model
     type Event {
-        _id: ID!
+        uuid: ID!
         name: String!
         hasEventType: EventType!
         hasCustomer: Customer!
@@ -21,14 +21,14 @@ const typeDefs = gql`
 
     # EventType model
     type EventType {
-        _id: ID!
+        uuid: ID!
         name: String!
         description: String!
     }
 
     # Reservation model
     type Reservation {
-        _id: ID!
+        uuid: ID!
         eventDate: String!
         headCount: Int!
         hasCustomer: Customer!
