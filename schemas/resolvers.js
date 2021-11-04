@@ -11,11 +11,15 @@ const resolvers = {
             const reservationData = await Reservation.findAll()
 
             return reservationData;
-        }
+        },
+        async getAllEvents() {
+            const eventData = await Event.findAll();
+
+            return eventData;
+        },
     },
 
     Mutation: {
-        // TODO: get foreign key values into GraphQL
         async addCustomer(parent, args) {
             const newCustomer = args;
             const customerData = Customer.create(newCustomer);
