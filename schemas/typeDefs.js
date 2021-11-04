@@ -37,13 +37,13 @@ const typeDefs = gql`
     # Queries
     type Query {
         getAllCustomers: [Customer!]!
-        getOneCustomer(id: ID!): Customer!
+        getOneCustomer(uuid: ID!): Customer!
         getAllReservations: [Reservation!]!
-        getOneReservation(id: ID!): Reservation!
+        getOneReservation(uuid: ID!): Reservation!
         getAllEvents: [Event!]!
-        getOneEvent(id: ID!): Event!
+        getOneEvent(uuid: ID!): Event!
         getAllEventTypes: [EventType!]!
-        getOneEventType(id: ID!): EventType!
+        getOneEventType(uuid: ID!): EventType!
     }
 
     # Mutations
